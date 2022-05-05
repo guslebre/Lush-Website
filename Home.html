@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Lush</title>
+      <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <!-- Top Bar  -->
+      <div class="topnavigationmenu">
+         <div class="topbar">
+            <img class="boximg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAu0lEQVRIS+2V0Q3CMBBD7QkYAdgANmAUmAxGYQMYod2ADYxSKVVSgtT0cvSH/rXp+cXnKEc4P3TWx+8Akk4ArgB2RlcdgAvJe9AZHUgKC1ujeCzvSO6nAA0fSFPbJGU6qQN3QMsW9SSHLFMHBwCPRhkcST4zQHiZ9q8WVqrPAl0FEKHf3KSnbpEDd0BNDosc/AHrH9PWGbwAbGpEC/+O91DpqghD52aYCz2Acxw2HwDjzovlpuEyZ0PugDc8Y4gZcrsjnAAAAABJRU5ErkJggg=="/>
+            <p class="topnavtext">Track Order</p>
+            <img class="chatimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA7UlEQVRIS+2V4RHBQBCFv1cBHaASSlACHSghHdABLehAJ+iACtZsRjIncjcJZ/JH/maz3+57dy/ix49+3J8owMwWwB6Y9hziAqwlnfy7FMALJz2bV+UXSbMkoG9jM/NND8C8bCyVw2f14Ak5twJyaW5mFgNk0TwFeCF39aDZ8A94U24oia6SygSo70Fzki9M9tO4eouKXIDmYNk3SAFuwCgsqPKkwy2vNU8BPJ49rMIE9UTcAsuEJ9dQ8yggfFH5AfhWY+AO7CQVXc2v6lrTNAB43RHYSPLT0ftJAZKrdyXFAMUncrRBs/5wBgE8AJESpxnwjOzhAAAAAElFTkSuQmCC"/>
+            <p class="topnavtext">Chat with us</p>
+            <img class="chatimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB1UlEQVRIS7VV0VUCMRCcqUCtQKlAqECtQKxAqECoRKxAqECtQKxAOhA70ArWN/d2eSEkd+cH+bl7uc3M7sxmjzjy4pHx0UlgZhcAHgBcAxh6QhsAawBPJLdtSbYSmNnCwdswFiTntYAqgZkpy0s/uAIgIO3BzFTJDMB9VERyVCIpEiSZ/0qaAM4BnEhSnbhcIt1bBwSu+ZdHjQTue4+ZB3Pp7ySfHj/IPSkRhO4ycObgAjjNkvsBoAREsnS5mjNpXIkgtI/sXwHcAvgAMPHDArwC8EZynFSxyb0oEZhASDbfzEyZSuNd+YmMW5IDj9s7F1X8h+CMpMhEqrshn75J6l17vQnUFSo/l0j7U8/s2S9eSKRL+C4ZSep9t0oVhGHqkoVnK18kU7rUwkM3Wcaqy1Ykw6cmtkQwBvACINVXMqi70lExi5Y0M42LcwB3JNUU9QpczzgwJamKqsvMlLEk2/nRhyCqkKnqnsbcfJmZ7obM1vMg+6JEAWJmYfaa5E2FIO7MgbnVNk0IlJWkkrlLktFBTUhye2X2Ra3KrnEtU2OY7Ugy8OowbJUoqWSPxPWWR62TtlOiVPNsLOtTL/BeFWSVRMtOav+IvBk6/8ltd6DPt6MT/AFc/u8ZY8ycjwAAAABJRU5ErkJggg=="/>
+            <p class="topnavtext">Find Your Store</p>
+         </div>
+         <!-- NAVIGATION BAR -->
+         <nav>
+            <div class="logodiv"><img class="logoimg" src="../Images/lushlogo.png"></div>
+            <div class="searchbar">
+               <button class="searchbutton" type="submit"><img class="searchimg" src="../Images/search.jpg"></button>
+               <input class="search" type="text" name="searchbar" placeholder="I am looking for...">
+            </div>
+            <div class="logindiv">
+               <img class="userimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC20lEQVRoQ+1Y7W0VMRCcqQA6gFQAqQBSAaQCQgWQDqACQgWQCkgqIFSQpAKSDqCCRYN8kuP42z6996S30v0627vjnf3wEjsu3HH7sQewaQ9O94CZvQPwGsBL9wnjjfsuSF7OBD0NgJm9BfAFwPOCgXcATklezAAyBYCZyfCPjQadkTxt3PNo+TAAMzsD8KHTkK8kW4E/UDUEwNHmR8T4cwC6YXEfZqZ4kKGKj1COR+g0CuB3wPm/CuDF8NBSB+QKwBPv3x3Jg04P9tcBMzsB8C1QfJgyflnnQFwH+7q90O0BM/seUKKaz5G95yR1Ic0yAkC3KG4vUrz9jBduSB42Ww8MUch8hSSbLsPMhvYvupuU+gaPGjC6fwYApcgXkyh0S9KnYzWbRjwQBnF1IG5LEKv3CYtYMZC3Jo26CqvG7Jnn7z8AjgqF7CeAp96ee5KlBjBJqW4KOQAxL+iX6KW64LcS6pdiub67iEnREAAHYnebOa8w9YCorty5lDTsAQ+E6CQgfkzEdN+rMx3pQB8U0OqEW7nQtdgCo7y+1Ilb70k55SU2XMgq8ay+bBqFVrc0oWAIgCtKb9wUQrm9th1QelXN0OPmsvSGmB7EbnTyqWICUeuY7klFkwfMTBVTrzDNfdYQeeQ9SQGqkmoAji5hG1ClpHFRth0Jz6oCkGjAlrM0gdDN6VX1v3UoiTtP8aJ0qxiKSbEx1KYiAEcbPR/9Bkx7NSJUQap2d8xKd74KYAhEnhCI7Pk1AESbkPMaDUrpNDEzzY004fPliuRRTkkWQGJ0Mt34xcAEiGy3WgIQDq6Us8Xb1cTM1Gr4dMoOvpIAEoF7UOLkKDIXE7o4X5IBnQMQtsjVb94JIEIvfCapwvlIcgCUGl95O1Rg9NJaXSKx94tktHjmAHRP3kYRRuibnNzlAEyZnPWCqR187QH03nBp37AHSgq25X+xldgWQ1N27AFs2kN7D2zaA/8AqHg2QBOQCewAAAAASUVORK5CYII="/>
+               <p class="welcometext">Welcome</p>
+               <a class="signintext" href="">
+                  <p>Sign in</p>
+               </a>
+               <a href="" class="registertext">| Register</a>
+               <a href=""><img class="heartimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAClElEQVRoQ+2Y/U0cMRDF31SQUAHQAVQAVJBQAaQCoIJABQkVkFQAqSDQAR2QVABUMNGTvMgYf609XnTRWdp/7tbr95s3M/auYMWHrLh+rAHe28G1AyvlgKp+BPAJwD6ALXeR4Y+7bgH8EpGnGFjv/Ngzq1LILXwC4BQAIXKD4r8DuJxAeufnFisCqOoOgN8VwsN16Mqh+/Hac6s26xiIAxG5bwZQ1WMA3xrE14os3UeIMxH5kbox6UAm8n8B3LiLUeZgPXx212ZB1TMACmK9TLXCtGRdMWAfgvlZJ6IALmcfIpG/YH4XipR18jUBcQngvDD/HADrzR+E2I7NSwHwIaGILzkr/dVc6l0FInrnX4gIdb0abwAS0Y9OzqWKqjKlptw9FhGmXfVQVXYy34moCzEA5qEfPeb8Tsr2akUzb3SBZI35NfHGxRgAo3bkrcd+zrxefERc+CkiDPDLiAGwO+x597AX87fFh6qyM3EPmsadiPC3LMBj0H02lk6fSZ2qsj2zG07jSUQ2SgAsFj/v2L6mfr+oCxGAZxF5dZT5L1MoLOLZLdTKptYiDtso02d36TpI7EdVbZQ5FvbfxV2IRJ9nqK0wkEOOEr0plDiK1B0luHhiF+Rf1eeZVoiE+ORpoHSc5gYWHm+HQSTEM3X2Uy822TeyxAOHONG6Vs0rZdiVpuwwc6JVPIUUAVxNDIPoEV8NMAqiV/wsAGsIC/GzAawgrMQ3AfRCWIpvBmiFsBbfBTAXYoT4boBaiFHiTQBKEG7XC78Rme3mVRtZzcEsE+XYdLNd3Ayg4IQPYSbeLIV8dQUnTMUPAcg4YS5+GIAHwe+bHKe1H4Zr6s2/x7QG5i5ucf8awCKKPc9YO9ATPYu5K+/AP4P9a0AvYO3yAAAAAElFTkSuQmCC"/></a>
+               <a href=""><img class="bagimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB+ElEQVRoQ+1Z0VECMRTcrcAS1A6gAztQK1ArECoRK1AqEDqwA+lA6EArWOfNHDNHjiPJvQNEkxm+kpe3u2+TCwlx4o0njh+FwLEr2HsFJN0BuAIwqH7GcVH9ZiTnfZLujYCkGwBPAC4iAJcAxiRnfRDphYAkAz7KBDQhOc6MaQx3E5A0AfDYEcgzyVziG6lcBCrbvG0BPwVgCpv3IcnWgwG19RG2W4+dvAQ+A89/2wJeAw+RVkTeAZzV+pYkLztWsPt3QNI9gJcg8bAN/HpcReIjiOtchc4VkPQaWCLZz1tipyRNkOzmIWAqmrfXLar+jiosSA6z0QMuC6mekGSWGJJc8evcWUnrgL0AvPF/n4AkO8/YLhM7GnSxbk6MHT0eSNr222itFpIU7vE5Sfse2/qt2EVgY5H1jSh3vrZN4v8QCBXw7iKx+Fh/dBeKTRDrj1kkFh/rLwRSFWqrRCw+1u+uQMwi3v5CIFUBr9JdLVYstC/la/8Zko7byV/i3PO+l2CqhQsBr9JlEXsVKBVoUaAs4lQFioWKhZwK/GYLfQXX4PvCmjLviuTW+6ldRwl7w7pOmf0AY+Yk7Q2u0XYRMMb2wlJ/jDgA1kYKezQZkLQbunQCNlKSkbA3MLtGPz8w+lUl4KgNvOHpfDt9YDKt6QqBY1fi5CvwA12JTUBuQHLyAAAAAElFTkSuQmCC"/></a>
+            </div>
+            <br>
+            <hr>
+            <div class="topnav" id="myTopnav">
+               <a href="Sustainability.html">Our Impact</a>
+               <a href="#news">New</a>
+               <a href="#contact">Bath and Shower</a>
+               <a href="#about">Hair</a>
+               <a href="#about">Face</a>
+               <a href="#about">Body</a>
+               <a href="#about">Gifts</a>
+               <a href="#about">Scent</a>
+               <a href="#about">Discover</a>
+               <a href="#about">Father's day</a>
+            </div>
+         </nav>
+      </div>
+      <!--  FIRST SECTION DIV -->
+      <div class="bathdiv">
+         <img class="bathimg" src="../Images/bathtub.jpg">
+         <h3 class="firsttext">Self-care Time for Dad</h3>
+         <h3 class="secondtext">Give them the me-time they deserve</h3>
+         <a href="" class="bathbut1">shop self-care essentials</a>
+         <a href="" class="bathbut2">shop gifts</a>
+      </div>
+      <!--  SECOND SECTION DIV -->
+      <div class="makeupdiv">
+         <div class="makeupimg">
+            <img class="img2" src="../Images/makeup.jpg">
+         </div>
+         <div class="makeuptext">
+            <p class="facetitle">Face and Body Masks</p>
+            <p class="masktext">Mask your face or any other place</p>
+            <p class="shopmask">Shop masks</p>
+         </div>
+      </div>
+      <!-- THIRD SECTION DIV -->
+      <div class="container">
+         <div class="firstimage">
+            <img class="soapimg" src="../Images/soap.jpg">
+            <a href="" class="soaptext">Gels</a>
+         </div>
+         <div class="midimage">
+            <img class="soapimg" src="../Images/prod.jpg">
+            <a href="" class="soaptext">Bestsellers</a>
+         </div>
+         <div class="midimage">
+            <img class="soapimg" src="../Images/lotion.jpg">
+            <a href="" class="soaptext">Father's</a>
+         </div>
+         <div class="midimage">
+            <img class="soapimg" src="../Images/cosm.jpg">
+            <a href="" class="soaptext">Lotions</a>
+         </div>
+      </div>
+      <br>
+      <br>
+      <!-- FOURTH SECTION DIV -->
+      <div class="ourimpact">
+         <p class="titleimpact">Our Impact</p>
+         <div class="slideshow-container">
+            <div class="mySlides1">
+               <p class="slidetext"><b>The Neskantaga Water</b></p>
+               <p class="slidetext2">The First Nations reserve of Neskantaga in<BR>Northern Ontario has been under a boil<BR>water advisory for more than 25 years—<BR>the longest ever in Canadian history.</p>
+               <a class="article" href="">Read article</a>
+               <img src="../Images/slide1.jpg" class="slideimg">
+            </div>
+            <div class="mySlides1">
+               <p class="slidetext"><b>Healthy Water</b></p>
+               <p class="slidetext2">Canada has the third largest renewable<BR>supply of freshwater in the world—about<BR>seven percent of it, which is spread across<BR>lakes, rivers, aquifers, and glaciers. It’s<BR>also vital to Lush's operations.</p>
+               <a class="article2" href="">Read article</a>
+               <img src="../Images/slide2.jpg" class="slideimg2">
+            </div>
+            <div class="mySlides1">
+               <p class="slidetext"><b>Regenerative Farming</b></p>
+               <p class="slidetext2">Regenerative farming is a practice that<BR>leaves the land in a richer, more diverse<BR>and resilient state as a result of agriculture<BR>- rather than in spite of it.</p>
+               <a class="article2" href="">Read article</a>
+               <img src="../Images/slide3.jpg" class="slideimg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+         </div>
+         <br>
+         <br>
+         <br>
+         <br>
+      </div>
+      <br>
+      <br>
+      <!-- FIFTH SECTION DIV -->
+      <div class="coloreddiv">
+         <p class="coloredtext1">Seeing Me</p>
+         <p class="coloredtext2">Real stories of love, diversity and Pride</p>
+         <a class="coloredbutton" href="">See the stories. take action</a>
+         <img class="colorimg" src="../Images/colored2.jpg">
+      </div>
+      <!-- SIXTH SECTION DIV -->
+      <h2 class="arrivals">New arrivals</h2>
+      <div class="productsdiv">
+         <div class="product1">
+            <p class="procuctname">body butter</p>
+            <br>
+            <a class="nametype" href="">You Are The Best</a>
+            <br>
+            <p class="nname">Shower and body delights</p>
+            <br>
+            <p class="productprice"><b>$13.95</b>/100g</p>
+            <br>
+            <a class="buybutton" href="">add to cart</a>
+         </div>
+         <div class="product2">
+            <p class="procuctname">gift set</p>
+            <br>
+            <a class="nametype" href="">Glen Cocoa</a>
+            <br>
+            <p class="nname">Go go cocoa</p>
+            <br>
+            <p class="productprice"><b>$19.95</b>/200g</p>
+            <br>
+            <a class="buybutton" href="">add to cart</a>
+         </div>
+         <div class="product3">
+            <p class="procuctname">fresh face mask</p>
+            <br>
+            <a class="nametype" href="">Lime Bounty</a>
+            <br>
+            <p class="nname">Rich, zesty lotion</p>
+            <br>
+            <p class="productprice"><b>$25.95</b>/250g</p>
+            <br>
+            <a class="buybutton" href="">add to cart</a>
+         </div>
+      </div>
+      <!-- SEVENTH SECTION DIV -->
+      <div class="bluediv">
+         <div class="bluetextdiv">
+            <h1 class="bluetitle">foot mask</h1>
+            <p class="bluetext"><b>Your feet are gonna lava Volcano's<BR>soothing blend of potatoes, tomatoes,<BR>kaolin and pumice. Slather it on, put your feet up, and chill.</b></p>
+            <h2 class="bluesubtitle">Recycled Packaging</h2>
+            <p class="bluesubtext">Our recycled black pots can be<BR>returned to Lush where we'll<BR>recycle them again.</p>
+            <h2 class="bluesubtitle2">Benefits</h2>
+            <p class="bluesubtext1">Kaolin cleanses and exfoliates.<BR>Fresh papaya cleanses and<BR>brightens. Fresh tomatoes<BR>deodorize.</p>
+            <a class="volcanobutton" href="">Shop volcano foot mask</a>
+         </div>
+         <!-- EIGHTTH SECTION DIV -->
+         <div class="blueimgdiv">
+            <img class="blueimgg" src="../Images/stone.jpg">
+         </div>
+      </div>
+      <br>
+      <h2 class="arrivals">Our values</h2>
+      <br>
+      <div class="vegdiv">
+         <div class="div1">
+            <img class="animg" src="../Images/animal.jpg">
+            <p class="antext">Fighting against animal testing is more than a slogan, it's a genuine practice.</p>
+            <a class="learnmore" href=""><b>Learn More</b></a>
+         </div>
+         <div class="div2">
+            <img class="animg" src="../Images/fresh.png">
+            <p class="antext">Our belief in freshness is infused into every area of our business.</p>
+            <a class="learnmore" href=""><b>Learn More</b></a>
+         </div>
+         <div class="div2">
+            <img class="animg" src="../Images/veg.png">
+            <p class="antext">All of our products are 100% vegetarian and most of those are vegan</p>
+            <a class="learnmore" href=""><b>Learn More</b></a>
+         </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <!-- FOOTER SECTION -->
+      <footer>
+         <div class="firstfooter">
+            <dl>
+               <dt class="footertitle">Help</dt>
+               <br>
+               <dd><a class="href" href="Contact.html">Contact Us</a></dd>
+               <dd><a class="href" href="">FAQ</a></dd>
+               <dd><a class="href" href="">Track your order</a></dd>
+               <dd><a class="href" href="">Shipping</a></dd>
+               <dd><a class="href" href="">Returns</a></dd>
+            </dl>
+         </div>
+         <div class="secfooter">
+            <dt class="footertitle">About</dt>
+            <br>
+            <dd><a class="href" href="Charity.html">Our Story</a></dd>
+            <dd><a class="href" href="">Newsroom</a></dd>
+            <dd><a class="href" href="">Carrers</a></dd>
+            <dd><a class="href" href="">Find a shop</a></dd>
+            <dd><a class="href" href="">Updates</a></dd>
+         </div>
+         <div class="footer3">
+            <p class="footertitle">Get the freshest news, straight to your inbox!</p>
+            <input class="mailput" type="text" placeholder="Enter your email address">
+            <a class="subbut" href="">Subscribe</a>
+            <p class="footertitle">Join the conversation</p>
+            <br>
+            <img class="socialimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABZElEQVRIS91VwVEDMRCTKoAS6ABSAVABUAFQAaEDUgHpgHQA6YAOCBVAKgAqEKOM78bns8+XzOSTnbmXvauV1qsj9hzcc30cGICkY5K/NdkkXQN4AHAB4BvAguTMeT4j+dbU6EgkyZd9YVUCkTQF8Jw5d84ZgHuSix6AJB9+ADCDG5LvaRFJJwC+Bhga5BPAvGmyZWB5APxEye5iRtKsNhGkeR0A+LNssQKpRO76PClgPf0ZaFKQp0lZkvR82kgZeGju/Kg26MK5GT8NAcQS7YLxSHKeBQga5yTaBmiSvsB0Bn4l1vt0m6rh7pqk8zvRswpJnoOXqDOsEYA9eZyTA7gD8DKiYHxl7SXLuUDW7CR5UGYxNi5zi5ll0FQMW+snd1tB6VhDdQbhNdk2zMBylcJbO419J3cxXjQP10Z2NUKXZSje2kgppzRkg5lF81xtYDbBjW3E/lRr5sD+aDW6u5zvXaJ/3HN3GWI+9wMAAAAASUVORK5CYII="/>
+            <img class="socialimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAx0lEQVRIS+2UCwkCQRCGv7+BDTSCDdQkXgQjaAKNYAUbaAKNoA1sMDKwB8vpvZY9VLiFhYFd/hczIwY+Ghif3yIwsxmwB+aA134ukpZ1SXR2EMCvwKQClo3gCKw/KM1GcAYWgeAEFJKebU3SJyKLwHaStm3g/v5dAjMrgGlQGiv2uPyWXVTWb6YaHZhZnHtdIo1x5SBYSUp2cAhD5erLDvL6AdyDpY2kW45B+8Muim2b2eigefDHiLosxqQ/nbdpEnqfdZ1K8AIoz18ZOUbYeQAAAABJRU5ErkJggg=="/>
+            <img class="socialimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpklEQVRIS82VvU0DURCEv+kAMjJMA/wUgIAKoAOgAqACICUBKgBXABEpPxEhiBQJBxQAFSwatGc9H7bvHFhmpdOT7vZ2dnZ294kpm6Ycn9kARMQmsAus5jOO6Avgpyvpoe74h0FE7AFX6fgIfGWAYSBOYA7YyI/7kq5LxwGAzPwecOAdSQ7eaBHRAW6BFWCrZFIHMPoO0GkTPCIWgDvgGTgDPrJUrsKv1QF6QE+SNRiwLN1ivrRPNyLWgSfgTdJyRFiDRUlLowACuJR0WDlEhOtsTXyWZmH3U4N3SZ8JsCGpn3idgQFOJZ0UAA7kGvtdJaBLcG7xJa0VvmbQHqDoqCNJF2X6EWHAY7OoOmdiBkWQ+bro2TkWtc/4XwJUQzedErnmEWGRPUDurG7qcJCiv0rqd1fbEg1rU3ePQUp7BfYkOYFfawPQNGhuV5sHbWDnFGznJFV+fybZP20DS21WRa1tHbRxVXhFeNl5YNzfZtRo2bI3Oe2jl13SLNe1gcat62pnVef4dV2I5R8M5LNacKOYfCfji1YXTmM9JnSYzZ08YZJj3X8Ac2D2GUCyScIAAAAASUVORK5CYII="/>
+            <img class="socialimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA/0lEQVRIS+2V7RHBQBCGn62ADuiADkgFdEAHdEAJ6QAdUAE6oAMlUMGajQuJSXInk/xzM/cjk933uX33PoSWh7Sszx/gdThnkaqOgQXQdXPoVXgFnFzcDdiJSPr96YETPwYK+sKiFPKuQFX3wMSXGfj/ICJTi80CrKxRoIAv7CwiZncOoJ6sCNgCPZ96IiySLD5bQSUgTVDVNbAEOlWg2gATVVXbZTEwK4M0AVi5SgoZtQGqavaYuFVROn4GANbkDdAPaPJDRJIFZJt8AQYBySEhhdu0yYNm18X8uwI7GO1dFW77GcTIqc+hJ/sK3N2MCy+7EGPrxPxfNK9rrVv0BAiBWBm6FYhRAAAAAElFTkSuQmCC"/>
+         </div>
+         <div class="footer4">
+            <hr>
+            <br>
+            <a href="" class="href1">Privacy policy</a>
+            <a href="" class="href2"> | </a>
+            <a href="" class="href2"> Terms & Conditions </a>
+            <a href="" class="href2"> | </a>
+            <a href="" class="href2"> Lush Canada </a>
+         </div>
+         <br>
+      </footer>
+      <script src="../JS/Main.js"></script>
+   </body>
+</html>
